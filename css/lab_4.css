@@ -1,0 +1,144 @@
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.planner-wrapper {
+    background: #fff;
+    width: 1000px;
+    border: 8px solid #dcdcdc; /* Товста зовнішня рамка */
+    padding: 2px;
+    display: grid;
+    /* Точна пропорція колонок згідно з картинкою */
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header header"
+        "todo mon tue wed"
+        "todo mon tue wed"
+        "todo thu fri sat"
+        "todo thu fri sun";
+}
+
+/* Шапка */
+.area-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.header-main h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    margin: 0;
+    line-height: 1;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.header-inputs, .header-checkboxes {
+    display: flex;
+    gap: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.header-checkboxes {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.line-input {
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    width: 100px;
+}
+
+/* Ліва колонка TO DO */
+.area-todo {
+    grid-area: todo;
+    border-right: 2px solid #555;
+    padding-right: 15px;
+    padding-left: 5px;
+}
+
+.todo-title {
+    text-align: right;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.todo-section h3 {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    margin: 10px 0 5px 0;
+}
+
+.task {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 4px;
+}
+
+.task input[type="checkbox"] {
+    margin: 0 5px 2px 0;
+    width: 12px;
+    height: 12px;
+}
+
+.task input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #2b5b84;
+}
+
+/* Блоки днів тижня */
+.day-block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.area-mon { grid-area: mon; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.area-tue { grid-area: tue; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.area-wed { grid-area: wed; border-bottom: 1px solid #ccc; }
+.area-thu { grid-area: thu; border-right: 1px solid #ccc; }
+.area-fri { grid-area: fri; border-right: 1px solid #ccc; }
+.area-sat { grid-area: sat; border-bottom: 1px solid #ccc; }
+.area-sun { grid-area: sun; }
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.day-block textarea {
+    flex-grow: 1;
+    border: none;
+    resize: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #2b5b84;
+}
