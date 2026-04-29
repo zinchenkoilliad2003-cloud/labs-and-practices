@@ -1,0 +1,48 @@
+.styled-registration-form {
+    background-color: #ffffff;
+    color: #333333;
+
+    width: 450px;
+    padding: 30px;
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    top: 10px;
+    margin: 20px auto;
+}
+
+.styled-registration-form input[type="text"],
+.styled-registration-form input[type="email"],
+.styled-registration-form input[type="password"],
+.styled-registration-form input[type="date"],
+.styled-registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.styled-registration-form input[type="submit"] {
+    width: 100%;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.styled-registration-form input[type="submit"]:hover {
+    background-color: #004494;
+}
