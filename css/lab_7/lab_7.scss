@@ -1,0 +1,16 @@
+@use 'variables' as v;
+@use 'greeting-card';
+@use 'button';
+
+body {
+    background-color: v.$color-bg-main;
+    color: v.$color-text;
+    font-family: v.$font-main;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle, #1a365d 0%, #0b1d3a 100%);
+}

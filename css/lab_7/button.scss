@@ -1,0 +1,26 @@
+@use 'variables' as v;
+@use 'sass:color';
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: v.$font-main;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: v.$border-radius-btn;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+
+    &--primary {
+        background-color: v.$color-primary;
+        color: v.$color-text;
+        
+        &:hover {
+            // Сучасний аналог darken()
+            background-color: color.adjust(v.$color-primary, $lightness: -10%);
+            box-shadow: 0 5px 15px rgba(212, 36, 38, 0.4);
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7</title>
+    <link rel="stylesheet" href="../../css/lab_7/lab_7.css">
+</head>
+<body>
+
+    <article class="greeting-card greeting-card--festive">
+        <div class="greeting-card__inner" id="card-inner">
+            <div class="greeting-card__image">🎄</div>
+            <h1 class="greeting-card__title">З Новим 2027 Роком!</h1>
+            <p class="greeting-card__text">
+                Нехай цей рік принесе вам безліч яскравих емоцій, мирне небо над головою, 
+                чистий код без багів та успішне закриття всіх сесій!
+            </p>
+            <button id="gift-btn" class="btn btn--primary">Отримати подарунок 🎁</button>
+        </div>
+        <div class="greeting-card__gift-wrapper" id="gift-wrapper" style="display: none;">
+            <div class="greeting-card__gift-emoji" id="gift-emoji">🎁</div>
+            <h2 class="greeting-card__gift-text" id="gift-text">Відкритий подарунок</h2>
+        </div>
+
+    </article>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('gift-btn');
+            const inner = document.getElementById('card-inner');
+            const giftWrapper = document.getElementById('gift-wrapper');
+            const giftEmoji = document.getElementById('gift-emoji');
+            const giftText = document.getElementById('gift-text');
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                inner.style.display = 'none';
+                giftWrapper.style.display = 'flex';
+                giftEmoji.textContent = '🎁';
+                giftEmoji.classList.remove('opened');
+                giftText.classList.remove('visible');
+                setTimeout(() => {
+                    giftEmoji.textContent = '📦';
+                    giftEmoji.classList.add('opened');
+                    giftText.classList.add('visible');
+                }, 1500);
+                setTimeout(() => {
+                    giftWrapper.style.display = 'none';
+                    inner.style.display = 'block';
+                }, 4500);
+            });
+        });
+    </script>
+</body>
+</html>
