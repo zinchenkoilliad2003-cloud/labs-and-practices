@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий веб-сайт Зінченко Ілля Денисовича</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/lab_5.css">
+</head>
+<body>
+
+<header>
+    <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#practices">Практичні роботи</a></li>
+            <li><a href="#labs">Лабораторні роботи</a></li>
+            <li><a href="#about">Контакти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    burger.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav-open');
+        burger.classList.toggle('burger-open', open);
+        burger.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav-open');
+            burger.classList.remove('burger-open');
+            burger.setAttribute('aria-expanded', false);
+        });
+    });
+</script>
+
+<section class="hero" id="about">
+    <div class="hero-text">
+        <h1>Привіт, я Зінченко Ілля Денисович,<br>Студент 123 спеціальності Комп'ютерна інженерія</h1>
+        <p>
+            Студент Державного університету інформаційно-комунікаційних технологій.
+            Захоплююся веб-розробкою, UI/UX дизайном та сучасними веб-технологіями.
+            Навчаюся з 2023 по 2026 рік.
+        </p>
+        <a class="btn-resume" href="mailto:zinchenko.illia.d.2003@gmail.com.com">Зв'язатися зі мною</a>
+    </div>
+
+    <div class="hero-avatar">
+        <div class="circle-bg"></div>
+        <div class="circle-img">
+            <img src="../../assets/images/profile.jpg" alt="Фото Зінченко Ілля"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="initials" style="display:none;">ЗІ</span>
+        </div>
+    </div>
+</section>
+
+<section class="recent-posts" id="practices">
+    <div class="section-header">
+        <h2>Практичні роботи</h2>
+        <a href="#practices">Переглянути всі</a>
+    </div>
+
+    <div class="posts-grid">
+        <div class="post-card">
+            <h3><a href="../practices/practice_1.html" style="color:inherit;text-decoration:none;">
+                Практична №1. Основи HTML
+            </a></h3>
+            <div class="post-meta">
+                <span>2026</span>
+                <span class="divider"></span>
+                <span>HTML, Структура</span>
+            </div>
+            <p>Створення базової структури сайту та таблиці розкладу занять.</p>
+        </div>
+
+        <div class="post-card">
+            <h3><a href="../labs/lab_1.html" style="color:inherit;text-decoration:none;">
+                Практична №2. Основи CSS
+            </a></h3>
+            <div class="post-meta">
+                <span>2026</span>
+                <span class="divider"></span>
+                <span>CSS, Стилізація</span>
+            </div>
+            <p>Довільна стилізація веб-форми з використанням сучасних CSS-властивостей.</p>
+        </div>
+
+        <div class="post-card">
+            <h3><a href="../youtube_page.html" style="color:inherit;text-decoration:none;">
+                Практична №3. Flexbox
+            </a></h3>
+            <div class="post-meta">
+                <span>2026</span>
+                <span class="divider"></span>
+                <span>CSS, Flexbox</span>
+            </div>
+            <p>Створення адаптивного макету веб-сторінки із застосуванням Flexbox.</p>
+        </div>
+
+        <div class="post-card">
+            <h3><a href="../practices/practice_4.html" style="color:inherit;text-decoration:none;">
+                Практична №4. CSS Grid
+            </a></h3>
+            <div class="post-meta">
+                <span>2026</span>
+                <span class="divider"></span>
+                <span>CSS Grid</span>
+            </div>
+            <p>Створення макета повнорозмірної клавіатури за допомогою CSS Grid.</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured-works" id="labs">
+    <h2>Лабораторні роботи</h2>
+
+    <div class="works-list">
+
+        <a class="work-item" href="../labs/lab_1.html">
+            <div class="work-thumb">
+                <!-- <img src="../../assets/images/lab1.jpg" alt="Лабораторна робота №1"
+                     onerror="this.parentElement.style.background='#EDF7FA';"> -->
+            </div>
+            <div class="work-info">
+                <div class="work-year-tag">
+                    <span class="year-badge">2026</span>
+                    <span class="work-category">HTML, Форми</span>
+                </div>
+                <h3>Лабораторна робота №1 — Форми в HTML</h3>
+                <p>Створення форми реєстрації користувача з валідацією та семантичною розміткою.</p>
+            </div>
+        </a>
+
+        <a class="work-item" href="../labs/lab_2.html">
+            <div class="work-thumb">
+                <!-- <img src="../../assets/images/lab2.jpg" alt="Лабораторна робота №2"
+                     onerror="this.parentElement.style.background='#EDF7FA';"> -->
+            </div>
+            <div class="work-info">
+                <div class="work-year-tag">
+                    <span class="year-badge">2026</span>
+                    <span class="work-category">CSS, Селектори</span>
+                </div>
+                <h3>Лабораторна робота №2 — Основи CSS</h3>
+                <p>Вивчення складних CSS-селекторів: псевдокласи, комбінатори, специфічність.</p>
+            </div>
+        </a>
+
+        <a class="work-item" href="../youtube_page.html">
+            <div class="work-thumb">
+                <!-- <img src="../../assets/images/lab3.jpg" alt="Лабораторна робота №3"
+                     onerror="this.parentElement.style.background='#EDF7FA';"> -->
+            </div>
+            <div class="work-info">
+                <div class="work-year-tag">
+                    <span class="year-badge">2026</span>
+                    <span class="work-category">Flexbox, Адаптивність</span>
+                </div>
+                <h3>Лабораторна робота №3 — Flexbox</h3>
+                <p>Створення адаптивного макету веб-сторінки з flex-контейнерами та flex-елементами.</p>
+            </div>
+        </a>
+
+        <a class="work-item" href="../labs/lab_4.html">
+            <div class="work-thumb">
+                <!-- <img src="../../assets/images/lab4.jpg" alt="Лабораторна робота №4"
+                     onerror="this.parentElement.style.background='#EDF7FA';"> -->
+            </div>
+            <div class="work-info">
+                <div class="work-year-tag">
+                    <span class="year-badge">2026</span>
+                    <span class="work-category">CSS Grid</span>
+                </div>
+                <h3>Лабораторна робота №4 — CSS Grid</h3>
+                <p>Розробка інтерактивної сторінки тижневика з редагованими полями на основі Grid.</p>
+            </div>
+        </a>
+
+        <a class="work-item" href="../labs/lab_5.html">
+            <div class="work-thumb">
+                <!-- <img src="../../assets/images/lab5.jpg" alt="Лабораторна робота №5"
+                     onerror="this.parentElement.style.background='#EDF7FA';"> -->
+            </div>
+            <div class="work-info">
+                <div class="work-year-tag">
+                    <span class="year-badge">2026</span>
+                    <span class="work-category">Веб-технології</span>
+                </div>
+                <h3>Лабораторна робота №5 — Веб-технології</h3>
+                <p>Поглиблене вивчення сучасних веб-технологій та стандартів.</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-socials">
+        <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303
+                    3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                    0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61
+                    -4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7
+                    c-1.087-.744.084-.729.084-.729 1.205.084 1.838
+                    1.236 1.838 1.236 1.07 1.835 2.809 1.305
+                    3.495.998.108-.776.417-1.305.76-1.605-2.665
+                    -.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38
+                    1.235-3.22-.135-.303-.54-1.523.105-3.176 0
+                    0 1.005-.322 3.3 1.23.96-.267 1.98-.399
+                    3-.405 1.02.006 2.04.138 3 .405 2.28-1.552
+                    3.285-1.23 3.285-1.23.645 1.653.24 2.873
+                    .12 3.176.765.84 1.23 1.91 1.23 3.22 0
+                    4.61-2.805 5.625-5.475 5.92.42.36.81 1.096
+                    .81 2.22 0 1.606-.015 2.896-.015 3.286 0
+                    .315.21.69.825.57C20.565 22.092 24 17.592
+                    24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+        </a>
+        <a href="mailto:zinchenko.illia.d.2003@gmail.com.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9
+                    2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0
+                    4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+    </div>
+    <p>Copyright &copy;2023&ndash;2026 Зінченко Ілля Денисович | zinchenko.illia.d.2003@gmail.com.com</p>
+</footer>
+
+</body>
+</html>
